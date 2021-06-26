@@ -19,6 +19,8 @@ services:
       REDIS_HOST: redis
     volumes:
       - ./.env:/usr/src/app/.env    
+      - ./client/components/Header.tsx:/usr/src/app/client/components/Header.tsx
+      - ./client/components/Footer.tsx:/usr/src/app/client/components/Footer.tsx
   redis:
     image: redis:6.0-alpine
     volumes:
